@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>
+			
+		</title>
+		<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+		<link rel="stylesheet" href="stylesheets/screen.css"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+		<link href="https://fonts.googleapis.com/css2?family=Dongle:wght@400;700&family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
+
+
+		<title>Burger King</title>
+
+			<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css2?family=Dongle:wght@400;700&family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
+
+
+
+	</head>
+	<body class="acceuil-body" id="body">
+
+			<section id="navbar">
+				<div class="logo">
+ 		BR<i class="fa fa-burger"></i>ZIL</div>			
+ 			</div>
+				<ul id="list">
+					<li>
+						<a th:href="@{index}" class="para-font">Home</a>
+					</li>
+					<li>
+						<a href="#main" class="para-font">Menu</a>
+					</li>
+					<li>
+						<a href="#food" class="para-font">Burger</a>
+					</li>
+						
+					<li>
+						<a href="{{path('app_panier')}}" class="para-font">
+							<i class="fa-solid fa-cart-shopping"></i></a>
+					</li>
+                    	
+					<li>
+						<a href="{{path('app_panier')}}" class="para-font">
+							<i class="fa-solid fa-user"></i></a>
+					</li>
+
+				</ul>
+				<div class="menu" onclick="myFunction()">
+					<div class="one" id="menu"></div>
+				</div>
+			</section>
+
+			<section id="home">
+
+				<div class="divider">
+                    <div class="home-left">
+						<h2 class="h-secondary color-primary">Menu du jour</h2>
+						<h1 class="h-primary color-primary">BEST</h1>
+						<h3 class="h-secondary color-primary">BURGER</h3>
+					</div>
+                    <img th:src = "@{images/burger.png}" alt="test"/>
+				</div>
+					
+				</div>
+			</section>
+            
+
+            <section class="center-div" id="food">
+                <h1 class="center color-primary center-heading">Menus</h1>
+                      
+                <div class="burger-container row">
+                
+                
+                        <div class="burger-item d-flex col-md-3">
+                            <img  th:src="@{images/burger.png}" alt="">
+                            <h2 class="center color-primary burger-heading">big burger</h2>
+                        <div class="d-flex">
+                            <div class="mr-5"> <a href="{{path('app_detail_burger',{'id':burger.id})}}" class="order-btn">Detail</a></div>
+                            <div class="ml-5"><a href="{{path('app_add_panier',{'id':burger.id})}}" class="order-btn"><i class="fa-solid fa-cart-plus"></i></a></div> 
+                          </div>
+                        </div>
+                        <div class="burger-item col-md-3">
+                            <img th:src="@{images/burger.png}" alt="">
+                            <h2 class="center color-primary burger-heading">small burger</h2>
+                        <div class="d-flex">
+                            <div class="mr-5"> <a href="{{path('app_detail_burger',{'id':burger.id})}}" class="order-btn">Detail</a></div>
+                            <div class="ml-5"><a href="{{path('app_add_panier',{'id':burger.id})}}" class="order-btn"><i class="fa-solid fa-cart-plus"></i></a></div> 
+                          </div>
+                        </div>
+                        <div class="burger-item col-md-3">
+                            <img th:src="@{images/burger.png}" alt="">
+                            <h2 class="center color-primary burger-heading">burger</h2>
+                        <div class="d-flex">
+                       <div class="mr-5"> <a href="{{path('app_detail_burger',{'id':burger.id})}}" class="order-btn">Detail</a></div>
+                       <div class="ml-5"><a href="{{path('app_add_panier',{'id':burger.id})}}" class="order-btn"><i class="fa-solid fa-cart-plus"></i></a></div> 
+                          </div>
+                        </div>
+                    
+                                    </div>
+        
+            </section>
+            <section class="center-div" id="food">
+                <h1 class="center color-primary center-heading">Burgers</h1>
+                      
+                <div class="burger-container row">
+                
+                
+                        <div class="burger-item d-flex col-md-3">
+                            <img  th:src="@{images/burger.png}" alt="">
+                            <h2 class="center color-primary burger-heading">big burger</h2>
+                        <div class="d-flex">
+                            <div class="mr-5"> <a href="{{path('app_detail_burger',{'id':burger.id})}}" class="order-btn">Detail</a></div>
+                            <div class="ml-5"><a href="{{path('app_add_panier',{'id':burger.id})}}" class="order-btn"><i class="fa-solid fa-cart-plus"></i></a></div> 
+                          </div>
+                        </div>
+                        <div class="burger-item col-md-3">
+                            <img th:src="@{images/burger.png}" alt="">
+                            <h2 class="center color-primary burger-heading">small burger</h2>
+                        <div class="d-flex">
+                            <div class="mr-5"> <a href="{{path('app_detail_burger',{'id':burger.id})}}" class="order-btn">Detail</a></div>
+                            <div class="ml-5"><a href="{{path('app_add_panier',{'id':burger.id})}}" class="order-btn"><i class="fa-solid fa-cart-plus"></i></a></div> 
+                          </div>
+                        </div>
+                        <div class="burger-item col-md-3">
+                            <img th:src="@{images/burger.png}" alt="">
+                            <h2 class="center color-primary burger-heading">burger</h2>
+                        <div class="d-flex">
+                       <div class="mr-5"> <a href="{{path('app_detail_burger',{'id':burger.id})}}" class="order-btn">Detail</a></div>
+                       <div class="ml-5"><a href="{{path('app_add_panier',{'id':burger.id})}}" class="order-btn"><i class="fa-solid fa-cart-plus"></i></a></div> 
+                          </div>
+                        </div>
+                    
+                                    </div>
+        
+            </section>
+			
+			<script>
+				
+
+				function myFunction() {
+var x = document.getElementById("list");
+if (x.style.display === "block") {
+x.style.display = "none";
+} else {
+x.style.display = "block";
+}
+}
+			</script>
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</body>
